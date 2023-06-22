@@ -1,0 +1,22 @@
+//complex number
+#include<stdio.h>
+int main(){
+int product;
+struct complex{
+int a;
+int b;
+int together;
+}number[2];
+for(i=0;i<2;i++){
+printf("Value of a is");
+scanf("%d",&number[i].a);
+scanf("%d",&number[i].b);
+number[i].together=a+ib
+printf("%d",&number[i].together);
+}
+product=number[0].together*number[1].together
+printf("%d",preoduct);
+return 0;
+ 
+
+// Pascal triangle question did not attempt
