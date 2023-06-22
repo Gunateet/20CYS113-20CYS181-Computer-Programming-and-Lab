@@ -1,0 +1,76 @@
+//COMPLEX NUMBER
+
+#include <stdio.h>
+
+// Define a structure to represent a complex number
+typedef struct {
+  double real; // The real part
+  double imag; // The imaginary part
+} complex;
+
+// Define a function to multiply two complex numbers
+complex multiply(complex a, complex b) {
+  complex result; 
+  
+  result.real = a.real * b.real - a.imag * b.imag;
+  result.imag = a.real * b.imag + a.imag * b.real;
+  return result; // Return the result
+}
+
+// Define a function to print a complex number
+void print_complex(complex c) {
+  // Use the format a + bi or a - bi depending on the sign of the imaginary part
+  if (c.imag >= 0) {
+    printf("%.2f + %.2fi\n", c.real, c.imag);
+  } else {
+    printf("%.2f - %.2fi\n", c.real, -c.imag);
+  }
+}
+
+int main() {
+  complex x, y, z; 
+  
+  printf("Enter the first complex number (real and imaginary parts): ");
+  scanf("%lf %lf", &x.real, &x.imag);
+  
+  printf("Enter the second complex number (real and imaginary parts): ");
+  scanf("%lf %lf", &y.real, &y.imag);
+  
+  z = multiply(x, y);
+  
+  printf("The product of the two complex numbers is: ");
+  print_complex(z);
+  return 0; 
+
+}
+
+
+
+//Pascal triangle;
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, k;
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        // Print spaces for alignment
+        for (k = 0; k < n - i - 1; k++)
+        {
+            printf(" ");
+        }
+        // Calculate and print the coefficients
+        int c = 1;
+        for (j = 0; j <= i; j++)
+        {
+            printf("%d ", c);
+            c = c * (i - j) / (j + 1);
+        }
+        // Move to the next line
+        printf("\n");
+    }
+    return 0;
+
+
