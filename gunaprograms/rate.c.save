@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+	int volume,time  ;
+	double rate ;
+	printf("enter volume to be infused");
+	scanf("%d",&volume);
+	scanf("%d",&time);
+	time=time/60;
+	rate= volume/time;
+	printf("volume to be infused is %d",volume);
+	printf("%lf",rate);
+	return 0;
+}
